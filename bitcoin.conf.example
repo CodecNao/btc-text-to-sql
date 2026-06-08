@@ -1,0 +1,15 @@
+# Example bitcoin.conf  — copy to your Bitcoin data dir and edit the credentials.
+# Linux:   ~/.bitcoin/bitcoin.conf
+# macOS:   ~/Library/Application Support/Bitcoin/bitcoin.conf
+
+server=1            # enable the JSON-RPC server
+txindex=1           # REQUIRED: full transaction index (needed for vin lookups / fees)
+rpcuser=bitcoinrpc
+rpcpassword=CHANGE_ME_to_a_long_random_string
+
+# optional: keep RPC local only
+rpcbind=127.0.0.1
+rpcallowip=127.0.0.1
+
+# Mainnet RPC port is 8332. The node will sync from the genesis block and then
+# keep running, appending new blocks as they arrive (HW item 1a).
